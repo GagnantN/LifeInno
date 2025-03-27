@@ -29,12 +29,12 @@
 <div class ="pageConnexion">
     <div class ="connexion">
         <a href="index.php?page=accueil"><img src="assets/images/logo.png" class="logoConnexion" alt="Photo du Site Direction Accueil" ></a>
-        <form action="POST">
-            <label>E-mail  <input class="mail" type="text" name="mail" placeholder="Email (obligatoire)" required></label>
-            <label>Mot de passe  <input class="passwd" type="password" name="password" placeholder="Mot de passe (obligatoire)" required></label>
+        <form class="formConnexion" action="POST">
+            <label class="labelConnection">E-mail  <input class="mail" type="text" name="mail" placeholder="Email (obligatoire)" required></label>
+            <label class="labelConnection">Mot de passe  <input class="passwd" type="password" name="password" placeholder="Mot de passe (obligatoire)" required></label>
             <div class ="buttonConnexion">
-                <button type="submit">CONNEXION</button>
-                <button><a href="index.php?page=inscription">PAS DE COMPTE ?</a></button>
+                <button class ="bottomConnex" type="submit">CONNEXION</button>
+                <button class ="bottomConnex"><a href="index.php?page=inscription">PAS DE COMPTE ?</a></button>
             </div> 
         </form>
     </div>
