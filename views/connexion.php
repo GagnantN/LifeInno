@@ -33,8 +33,8 @@
             <label>E-mail  <input class="mail" type="text" name="mail" placeholder="Email (obligatoire)" required></label>
             <label>Mot de passe  <input class="passwd" type="password" name="password" placeholder="Mot de passe (obligatoire)" required></label>
             <div class ="buttonConnexion">
-                <button type="submit">Se connecter</button>
-                <button><a href="index.php?page=inscription">Inscription</a></button>
+                <button type="submit">CONNEXION</button>
+                <button><a href="index.php?page=inscription">PAS DE COMPTE ?</a></button>
             </div> 
         </form>
     </div>

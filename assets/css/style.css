@@ -101,6 +101,7 @@ footer p{
 }
 
 .connexion {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -118,9 +119,12 @@ footer p{
 }
 
 .logoConnexion {
-  position: relative;
-  top: 0;
-  width: 320px;
+  position: absolute;
+  top: -2%; 
+  left: 50%;
+  transform: translateX(-50%); 
+  width: 280px; 
+  max-width: 80%; 
 }
 
 form {
@@ -128,23 +132,42 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* margin-top: 20%; */
+  margin-top: 20%;
 }
 
 label, button {
   font-size: 24px;
   color:#323232;
   font-weight: 900;
+  margin: 10% 0 5% 0;
+}
+
+button{
+  outline: none;
+  border: none;
+  background-color: #E1BAA2;
+}
+
+button a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .buttonConnexion {
   display: flex;
   flex-direction: row;
+  gap: 5em;
+  text-decoration: none;
+
 }
 
 .mail, .passwd {
   font-size: 20px;
-  
+  margin-left: 20px;
+}
+
+.mail {
+  margin-left: 5em;
 }
 
 /* ---------- La page d'Accueil ---------- */
