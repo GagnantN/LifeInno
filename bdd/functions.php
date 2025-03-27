@@ -2,11 +2,11 @@
 
 require_once 'db.php';
 
-// function getJeu(){
-//     global $dbh;
-//     $stmt = $dbh->query("SELECT * FROM GAME");
-//     return $stmt->fetchAll(PDO::FETCH_ASSOC);
-// }
+function getAnnonces(){
+    global $dbh;
+    $stmt = $dbh->query("SELECT * FROM Annonces");
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
 
 // function getUser(){
 //     global $dbh;
@@ -35,6 +35,13 @@ require_once 'db.php';
 function getAnnoncesById($id) {
     global $dbh;
     $stmt = $dbh->prepare("SELECT * FROM Annonces WHERE id = :id");
+    $stmt->execute([':id' => $id]);
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+}
+
+function getAgencesById($id){
+    global $dbh;
+    $stmt = $dbh->prepare("SELECT * FROM Agences WHERE id = :id");
     $stmt->execute([':id' => $id]);
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }

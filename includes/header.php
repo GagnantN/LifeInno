@@ -22,9 +22,9 @@
                     break;  
                 case 'bien':
                     if (isset($_GET['id']) && is_numeric($_GET['id'])) {
-                        require_once "../bdd/functions.php";
-                        $jeu = getJeuById($_GET['id']);
-                        echo $jeu ? "Fiche du Bien : ".htmlspecialchars($jeu['nom']) : "Bien introuvable - Life Immo";
+                        require_once "bdd/functions.php";
+                        $bien = getAnnoncesById($_GET['id']);
+                        echo $bien ? "Fiche du Bien : ".htmlspecialchars($bien['adresse']) : "Bien introuvable - Life Immo";
                     } else {
                         echo "Fiche du Bien : Vide";
                     }
