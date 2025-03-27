@@ -31,21 +31,21 @@ require_once 'db.php';
 //     ]);
 // }
 
-// // Récupère un jeu spécifique par ID
-// function getJeuById($id) {
-//     global $dbh;
-//     $stmt = $dbh->prepare("SELECT * FROM GAME WHERE id = :id");
-//     $stmt->execute([':id' => $id]);
-//     return $stmt->fetch(PDO::FETCH_ASSOC);
-// }
+// Récupère un jeu spécifique par ID
+function getAnnoncesById($id) {
+    global $dbh;
+    $stmt = $dbh->prepare("SELECT * FROM Annonces WHERE id = :id");
+    $stmt->execute([':id' => $id]);
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+}
 
-// // Récupère tous les images d'un jeu par ID
-// function getImageByID($id) {
-//     global $dbh;
-//     $stmt = $dbh->prepare("SELECT images FROM GAME WHERE id = :id");
-//     $stmt->execute([':id' => $id]);
-//     return $stmt->fetchAll(PDO::FETCH_ASSOC);
-// }
+// Récupère tous les images d'un jeu par ID
+function getImageByID($id) {
+    global $dbh;
+    $stmt = $dbh->prepare("SELECT images FROM Annonces WHERE id = :id");
+    $stmt->execute([':id' => $id]);
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
 
 // // Récupère un utilisateur spécifique par ID
 // function isLoggedIn() {

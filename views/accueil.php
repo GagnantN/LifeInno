@@ -1,35 +1,14 @@
-<?php
-// Inclure le fichier functions.php
-require_once '../bdd/functions.php';
-
-
-// Vérifie si un ID est présent dans l'URL
-if (isset($_GET['id']) && is_numeric($_GET['id'])) {
-    $id = $_GET['id'];
-    $jeux = getJeuById($id);
-    $carrousels = getImageByID($id);
+<div class="carousel">
+    <?php
+    $images = [
+        "https://proprietes.lefigaro.fr/images/PDF/CMS/articles/11108772-1592902603.71.jpg",
+        "https://cdn.futura-sciences.com/buildsv6/images/largeoriginal/c/a/a/caab6ef88f_50164713_sp-mobilier-tendance-2020-1.jpg",
+        "https://www.presse-citron.net/app/uploads/2023/05/maison-immobilier.jpg"
+    ];
     
-
-    if (!$jeux) {
-        die("Jeu non trouvé !");
+    foreach ($images as $index => $url) {
+        echo "<div class='slide' style='background-image: url($url);'></div>";
     }
-} else {
-    die("ID invalide !");
-}
-?>
+    ?>
+</div>
 
-
-<section class ="carrousel">
-
-<?php foreach ($carrousels as $carrousel): ?>
-        <?php
-        // Séparer les images
-        $images = explode("??", $carrousel['images']);
-        foreach ($images as $image): ?>
-            <div class="slide">
-                <img class="imgCarrousel" src="<?= trim($image) ?>" alt="Game Image">
-            </div>
-        <?php endforeach; ?>
-    <?php endforeach; ?>
-
-</section>
