@@ -18,10 +18,8 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
 } else {
     die("ID invalide !");
 }
-
-
 ?>
-<?php var_dump($agences); ?>
+
 <div class="bienImmo">
     <!-- Partie Texte à gauche -->
     <div class="text-container">

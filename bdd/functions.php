@@ -64,6 +64,17 @@ function redirect($url) {
     exit;
 }
 
+function getAnnoncesFavoris($user_id, $dbh) {
+    $sql = "SELECT a.* FROM Annonces a
+            JOIN Agences ag ON a.id = ag.id_annonces
+            JOIN Agences_users au ON ag.id = au.id_agences
+            WHERE au.id_users = :id_users";
+
+    $stmt = $dbh->prepare($sql);
+    $stmt->bindParam(':id_users', $user_id, PDO::PARAM_INT);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
 
 //Afficher le profil
 // function afficheProfil(){

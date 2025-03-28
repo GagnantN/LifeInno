@@ -19,7 +19,7 @@ $annonces = getAnnonces();
 
                 <!-- Détails (Prix, Adresse et Adresse Postale) à droite -->
                 <div class="details-container">
-                    <p class="annonce-prix"><strong>Prix :</strong> <?= number_format($annonce['prix'], 0, '', ' ') ?>€</p>
+                    <p class="annonce-prix"><strong>Prix :</strong> <?= number_format($annonce['prix'], 0, '', ' ') ?> €</p>
                     <p class="annonce-adresse"><strong>Adresse :</strong> <?= htmlspecialchars($annonce['adresse']) ?></p>
                     <p class="annonce-adresse"><strong>Adresse Postale :</strong> <?= htmlspecialchars($annonce['adresse_postal']) ?></p>
                     <button class="annonce-button"> <a href="index.php?page=bien&id=<?= $annonce['id'] ?>">Découvrez le Bien</a></button>

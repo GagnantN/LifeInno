@@ -431,3 +431,45 @@ footer p{
 pre {
   margin-top: 500px;
 }
+
+/* ---------- La page d'Utilisateur ---------- */
+
+.profile-container {
+  position: absolute;
+  top: 10em;
+  right: 20px;
+}
+
+.deconnexion {
+  background-color: red;
+  color: #323232;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.deconnexion a {
+  color: #323232;
+  text-decoration: none;
+}
+
+.descriptionProfil {
+  position: relative;
+  top: 2em;
+  margin-bottom: 2em;
+}
+
+.descriptionProfil p{
+  margin-bottom: 1.5em;
+  margin-left: 1em;
+  font-size: 26px;
+  font-weight: 900;
+}
+
+.descriptionProfil .favoris{
+  font-size: 32px;
+  margin-top: 2em;
+}
