@@ -3,6 +3,7 @@
 require_once 'bdd/functions.php';
 
 
+
 // Vérifie si un ID est présent dans l'URL
 if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     $id = $_GET['id'];
@@ -20,17 +21,21 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
 
 
 ?>
+<?php var_dump($agences); ?>
 <div class="bienImmo">
     <!-- Partie Texte à gauche -->
     <div class="text-container">
         <div class="info-container">
             <p>ADRESSE : <?= htmlspecialchars($annonces['adresse']) ?></p>
             <p>ADRESSE POSTAL : <?= htmlspecialchars($annonces['adresse_postal']) ?></p>
+            <br>
         </div>
+
 
         <div class="info-container">
             <p>PRIX : <?= number_format($annonces['prix'], 0, '', ' ') ?> €</p>
             <p>PÉRIMÈTRE : <?= htmlspecialchars($annonces['perimetre']) ?> m²</p>
+            <br>
         </div>
 
         <div class="nom-image-container">
@@ -38,10 +43,10 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
             <img src="<?= htmlspecialchars($agences['image']) ?>" alt="Agence">
         </div>
 
-        <?php if (isset($_SESSION["user_id"])) { ?>
+        <?php if (isset($_SESSION["id"])) { ?>
             <form action="index.php?page=ajout_favori" method="POST">
-                <input type="hidden" name="jeu_id" value="<?= $annonces['id']; ?>">
-                <button type="submit">Ajouter aux Favoris</button>
+                <input type="hidden" name="id_agences" value="<?= $agences['id']; ?>">
+                <button class="contact" type="submit">CONTACT AGENCE</button>
             </form>
         <?php } ?>
     </div>
@@ -60,12 +65,3 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     </div>
 </div>
 
-
-
-        <!-- Lightbox pour afficher l'image en grand -->
-    <div id="lightbox" class="lightbox">
-        <span class="close">&times;</span>
-        <img id="lightbox-img" class="lightbox-img" src="" alt="Image en grand">
-    </div>
-
-    <h2><a href="index.php?page=Accueil">Retour à l'Accueil</a></h2>
