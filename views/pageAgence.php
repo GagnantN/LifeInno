@@ -28,22 +28,22 @@ $annonces = getAnnoncesFavoris($user_id, $dbh);
 
 
     <!-- Conteneur du profil (image + bouton) -->
-    <div class="profile-container">
+    <!-- <div class="profile-container">
         <button class="deconnexion"><a href="index.php?page=logout">Déconnexion</a></button>
-    </div>
+    </div> -->
 
     <!-- Nettoyage du float -->
-    <div class="descriptionProfil">
+    <!-- <div class="descriptionProfil">
 
         <p>Bienvenue : <?php echo htmlspecialchars($nom . " " . $prenom); ?> !</p>
         <p>Vous habitez au : <?php echo htmlspecialchars($adresse . " " . $adresse_postal); ?>.</p>
 
         <p class="favoris">Annonces mis en favoris :</p>
-    </div>
+    </div> -->
 
 
 <!-- Liste des annonces -->
-<ul class="annonce-list">
+<!-- <ul class="annonce-list">
         <?php if (empty($annonces)): ?>
             <p>Aucune annonce mise en favoris.</p>
         <?php else: ?>
@@ -51,14 +51,14 @@ $annonces = getAnnoncesFavoris($user_id, $dbh);
                 $premiereImage = explode('??', $annonce['images'])[0]; // Prend la première image
             ?>
                 <li class="annonce-item">
-                    <div class="annonce-container">
+                    <div class="annonce-container"> -->
                         <!-- Image du bien -->
-                        <div class="image-container">
+                        <!-- <div class="image-container">
                             <img src="<?= htmlspecialchars($premiereImage) ?>" alt="Fiche du jeu <?= htmlspecialchars($annonce['prix']) ?>">
-                        </div>
+                        </div> -->
 
                         <!-- Détails -->
-                        <div class="details-container">
+                        <!-- <div class="details-container">
                             <p class="annonce-prix"><strong>Prix :</strong> <?= number_format($annonce['prix'], 0, '', ' ') ?> €</p>
                             <p class="annonce-adresse"><strong>Adresse :</strong> <?= htmlspecialchars($annonce['adresse']) ?></p>
                             <p class="annonce-adresse"><strong>Adresse Postale :</strong> <?= htmlspecialchars($annonce['adresse_postal']) ?></p>
@@ -72,4 +72,7 @@ $annonces = getAnnoncesFavoris($user_id, $dbh);
                 </li>
             <?php endforeach; ?>
         <?php endif; ?>
-    </ul>
+    </ul> -->
+
+    <h1>UNE MISE A JOUR FUTUR ARRIVERA</h1>
+    <h1>BIENTOT</h1>

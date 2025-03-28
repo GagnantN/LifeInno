@@ -18,6 +18,8 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
 } else {
     die("ID invalide !");
 }
+
+
 ?>
 
 <div class="bienImmo">

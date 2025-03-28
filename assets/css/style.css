@@ -2,8 +2,10 @@
 
 .page-connexion header,
 .page-connexion footer,
-.page-inscription header,
-.page-inscription footer,
+.page-inscriptionUser header,
+.page-inscriptionUser footer,
+.page-inscriptionAgence header,
+.page-inscriptionAgence footer,
 .page-accueil footer {
     display: none;
 }
@@ -161,7 +163,13 @@ footer p{
 .bottomConnex{
   outline: none;
   border: none;
-  background-color: #E1BAA2;
+  background-color: #323232;
+  border-radius: 15px;
+  font-size: 32px;
+  color: #D9D9D9;
+  padding-left: 1em;
+  padding-right: 1em;
+  cursor: pointer;
 }
 
 .bottomConnex a {
@@ -174,8 +182,20 @@ footer p{
   flex-direction: row;
   gap: 8em;
   text-decoration: none;
+    cursor: pointer;
+  font-size: 10px !important;
 
 }
+
+.buttonConnexion .bottomConnex{
+  outline: none;
+  border: none;
+  background-color: #E1BAA2;
+  color: #323232;
+  font-size: 17px;
+  cursor: pointer;
+}
+
 
 .mail, .passwd {
   font-size: 20px;
@@ -259,8 +279,9 @@ footer p{
 }
 
 /* ---------- La page d'Accueil ---------- */
-.carousel {
-  position: relative;
+.carouselAcc {
+  top:0;
+  position: absolute;
   width: 100%;
   height: 100vh;
 }
@@ -393,6 +414,9 @@ footer p{
 
 /* Le carrousel doit s'agrandir dynamiquement selon le texte */
 .carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
   flex: 1;
   width: 100%;
   height: 90%;
@@ -438,6 +462,7 @@ pre {
   position: absolute;
   top: 10em;
   right: 20px;
+  z-index: 900; 
 }
 
 .deconnexion {
@@ -447,8 +472,9 @@ pre {
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
-  border: none;
+  border: 1px solid black;
   cursor: pointer;
+  font-size: 15px;
 }
 
 .deconnexion a {
@@ -472,4 +498,24 @@ pre {
 .descriptionProfil .favoris{
   font-size: 32px;
   margin-top: 2em;
+}
+
+.annonce-button{
+  margin-top: 1em;
+  border-radius: 15px;
+  background-color: #D9D9D9;
+}
+
+.annonce-button .suppr-button {
+  margin-left: 1em;
+  text-decoration: none;
+  background-color: #D9D9D9;
+  color: #323232;
+  font-weight: 900;
+  z-index: 900;
+  cursor: pointer;
+}
+
+body .en_Cours{
+  background-color: #D9D9D9 !important;
 }

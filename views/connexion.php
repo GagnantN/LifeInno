@@ -32,9 +32,10 @@ if (isset($_SESSION["id"])) {
         <form class="formConnexion" method="POST">
             <label class="labelConnection">E-mail  <input class="mail" type="text" name="mail" placeholder=" Email (obligatoire)" required></label>
             <label class="labelConnection">Mot de passe  <input class="passwd" type="password" name="password" placeholder=" Mot de passe (obligatoire)" required></label>
+            <button class ="bottomConnex" type="submit">CONNEXION</button>
             <div class ="buttonConnexion">
-                <button class ="bottomConnex" type="submit">CONNEXION</button>
-                <button class ="bottomConnex"><a href="index.php?page=inscription">PAS DE COMPTE ?</a></button>
+                <button class ="bottomConnex"><!--<a href="index.php?page=inscriptionAgence">-->PAS DE COMPTE D'AGENCE?</a></button>
+                <button class ="bottomConnex"><a href="index.php?page=inscriptionUser">PAS DE COMPTE UTILISATEUR?</a></button>
             </div> 
         </form>
     </div>

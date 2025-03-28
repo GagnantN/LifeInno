@@ -54,11 +54,6 @@ function getImageByID($id) {
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
-// // Récupère un utilisateur spécifique par ID
-// function isLoggedIn() {
-//     return isset($_SESSION['user']);
-// }
-
 function redirect($url) {
     header("Location: $url");
     exit;

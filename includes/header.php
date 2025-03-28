@@ -11,8 +11,11 @@
                 case 'accueil':
                     echo "Accueil du site Life Immo";
                     break;
-                case 'inscription':
+                case 'inscriptionUser':
                     echo "Inscription - Life Immo";
+                    break;
+                case 'inscriptionAgence':
+                    echo "Inscription Agence - Life Immo";
                     break;
                 case 'annonces':
                     echo "Listes Annonces - Life Immo";
@@ -30,7 +33,10 @@
                     }
                     break;
                 case 'pageUser':
-                    echo "Profil Utilisateur";
+                    echo "Profil Utilisateur - LifeImmo";
+                    break;
+                case 'pageAgence':
+                    echo "Profil Agence - LifeImmo";
                     break;
                 default:
                     echo "Page inconnue - Life Immo";
@@ -54,7 +60,7 @@
             <a href="index.php?page=accueil"><img src="assets/images/logo.png" class="logo" alt="Photo du Site Direction Accueil"></a>
             <ul>
                 <li><a href="index.php?page=annonces">Annonces</a></li>
-                <li><a href="index.php?page=agences">Agences</a></li>
+                <li><a href="index.php?page=pageAgence">Agences</a></li>
                 <li><a href="index.php?page=connexion">Utilisateur</a></li>
             </ul>
         </div>

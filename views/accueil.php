@@ -1,4 +1,4 @@
-<div class="carousel">
+<div class="carouselAcc">
     <?php
     $images = [
         "https://proprietes.lefigaro.fr/images/PDF/CMS/articles/11108772-1592902603.71.jpg",

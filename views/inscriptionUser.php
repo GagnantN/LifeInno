@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 
 <div class="inscription">
-    <a href="index.php?page=accueil"><img src="assets/images/logo.png" class="logoInscription" alt="Photo du Site Re-Direction Accueil" ></a>
+    <a href="index.php?page=connexion"><img src="assets/images/logo.png" class="logoInscription" alt="Photo du Site Re-Direction Connexion" ></a>
         <form class="formInscrip" method="POST">
             <label class="labelInscription">NOM<input class="inscrNom" type="text" name="nom" placeholder=" Nom" required></label>
             <label class="labelInscription">PRENOM<input class="inscrPrenom" type="text" name="prenom" placeholder=" Prénom" required></label>
